@@ -96,6 +96,8 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 
 # ---- size reduction: recovery partition is only 16 MiB ----
+TW_DISABLE_TTF := true
+TW_INCLUDE_CRYPTO := false
 TW_EXCLUDE_APEX := true
 TW_EXCLUDE_TWRPAPP := true
 TW_EXCLUDE_SUPERSU := true
