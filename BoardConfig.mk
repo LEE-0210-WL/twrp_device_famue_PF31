@@ -89,8 +89,19 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 PLATFORM_VERSION := 16.1.0
 
 # TWRP Configuration
-TW_THEME := portrait_hdpi
-TW_EXTRA_LANGUAGES := true
+TW_THEME := portrait_mdpi
+TW_EXTRA_LANGUAGES := false
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
+
+# slim build (32MB cap for artifact collection; local repack will trim ramdisk)
+TW_EXCLUDE_APEX := true
+TW_EXCLUDE_TWRPAPP := true
+TW_EXCLUDE_SUPERSU := true
+TW_EXCLUDE_NANO := true
+TW_EXCLUDE_BASH := true
+TW_INCLUDE_NTFS_3G := false
+TW_INCLUDE_FUSE_EXFAT := false
+TW_INCLUDE_FUSE_NTFS := false
+TW_INCLUDE_CRYPTO := false
